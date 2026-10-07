@@ -1,7 +1,7 @@
-const ARABIC_LETTERS = /[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF]/;
+const ARABIC_LETTERS = /(?=\p{Script=Arabic})\p{L}/u;
 const LATIN_LETTERS = /[A-Za-z]/;
 
-/** Return whether a string contains Arabic letters. */
+/** Return whether a string contains Arabic letters (not Arabic-Indic digits or punctuation). */
 export function isArabic(value) {
   return ARABIC_LETTERS.test(String(value));
 }
@@ -9,7 +9,7 @@ export function isArabic(value) {
 /** Detect the dominant script: arabic, latin, mixed, or unknown. */
 export function detectScript(value) {
   const text = String(value);
-  const arabicCount = (text.match(/[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF]/g) || []).length;
+  const arabicCount = (text.match(new RegExp(ARABIC_LETTERS.source, 'gu')) || []).length;
   const latinCount = (text.match(/[A-Za-z]/g) || []).length;
   if (!arabicCount && !latinCount) return 'unknown';
   if (arabicCount && latinCount) return 'mixed';
@@ -19,7 +19,7 @@ export function detectScript(value) {
 /** Return word count, character count, and repeated words. */
 export function textStats(value) {
   const text = String(value).trim();
-  const words = text ? text.split(/\s+/).filter(Boolean) : [];
+  const words = text.match(/[\p{L}\p{N}]+/gu) || [];
   const counts = new Map();
   for (const word of words) {
     const key = word.toLocaleLowerCase('ar');
