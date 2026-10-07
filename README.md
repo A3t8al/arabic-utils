@@ -47,12 +47,14 @@ console.log(slugifyArabic('أدوات المطورين العرب'));
 // ادوات-المطورين-العرب
 
 console.log(textStats('عربي عربي نص'));
-// { characters: 13, words: 3, repeatedWords: [{ word: 'عربي', count: 2 }] }
+// { characters: 12, words: 3, repeatedWords: [{ word: 'عربي', count: 2 }] }
 ```
+
+> ملاحظة: `normalizeArabic` مخصصة للبحث والمقارنة، وليست لتغيير النص المعروض للمستخدم؛ فهي توحّد أشكالًا مثل `ى` إلى `ي` و`ئ` إلى `ي`.
 
 ## الموقع التجريبي | Demo
 
-افتح `website/index.html` محلياً، أو انشر مجلد `website` عبر GitHub Pages.
+شغّل `npm run demo` ثم افتح `/website/`، أو فعّل GitHub Pages من **root** المستودع؛ رابط الموقع سيكون: [a3t8al.github.io/arabic-utils/website](https://a3t8al.github.io/arabic-utils/website/).
 
 ## التطوير | Development
 
@@ -76,4 +78,4 @@ npm run test:watch
 
 ## الترخيص | License
 
-MIT © arabic-utils contributors
+Copyright (c) 2026 A3t8al — MIT License
