@@ -15,3 +15,16 @@ test('returns useful text statistics and repeated words', () => {
     repeatedWords: [{ word: 'عربي', count: 2 }]
   });
 });
+
+test('ignores punctuation when counting repeated words', () => {
+  expect(textStats('كتاب، كتاب. كتاب')).toEqual({
+    characters: 16,
+    words: 3,
+    repeatedWords: [{ word: 'كتاب', count: 3 }]
+  });
+});
+
+test('handles empty text safely', () => {
+  expect(textStats('')).toEqual({ characters: 0, words: 0, repeatedWords: [] });
+  expect(slugifyArabic('!!!')).toBe('');
+});
