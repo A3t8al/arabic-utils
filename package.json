@@ -1,10 +1,18 @@
 {
-  "name": "arabic-utils",
+  "name": "arabic-utils-toolkit",
   "version": "0.1.0",
   "description": "Practical Arabic text utilities for JavaScript developers.",
   "type": "module",
   "main": "./src/index.js",
   "module": "./src/index.js",
+  "homepage": "https://a3t8al.github.io/arabic-utils/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/A3t8al/arabic-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/A3t8al/arabic-utils/issues"
+  },
   "exports": {
     ".": {
       "import": "./src/index.js",
@@ -15,10 +23,11 @@
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:watch": "npm test -- --watch",
-    "demo": "npx serve website"
+    "demo": "npx serve website",
+    "prepublishOnly": "npm test"
   },
   "keywords": ["arabic", "arabic-language", "rtl", "localization", "text-processing", "i18n"],
-  "author": "",
+  "author": "A3t8al",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.14",

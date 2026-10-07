@@ -1,7 +1,7 @@
-# Arabic Utils
+# Arabic Utils Toolkit
 
-[![npm version](https://img.shields.io/npm/v/arabic-utils.svg)](https://www.npmjs.com/package/arabic-utils)
-[![tests](https://github.com/YOUR_USERNAME/arabic-utils/actions/workflows/test.yml/badge.svg)](https://github.com/YOUR_USERNAME/arabic-utils/actions)
+[![npm version](https://img.shields.io/npm/v/arabic-utils-toolkit.svg)](https://www.npmjs.com/package/arabic-utils-toolkit)
+[![tests](https://github.com/A3t8al/arabic-utils/actions/workflows/test.yml/badge.svg)](https://github.com/A3t8al/arabic-utils/actions)
 [![license](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 > مجموعة أدوات JavaScript خفيفة وعملية لمعالجة النصوص العربية.
@@ -20,7 +20,7 @@
 ## التثبيت | Installation
 
 ```bash
-npm install arabic-utils
+npm install arabic-utils-toolkit
 ```
 
 ## الاستخدام | Usage
@@ -32,7 +32,7 @@ import {
   removeTashkeel,
   slugifyArabic,
   textStats
-} from 'arabic-utils';
+} from 'arabic-utils-toolkit';
 
 console.log(toArabicDigits('Invoice 1250'));
 // Invoice ١٢٥٠
