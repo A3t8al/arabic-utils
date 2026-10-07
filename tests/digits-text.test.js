@@ -14,4 +14,6 @@ test('detects Arabic content and dominant script', () => {
   expect(detectScript('Hello')).toBe('latin');
   expect(detectScript('Hello مرحبا')).toBe('mixed');
   expect(detectScript('123 !')).toBe('unknown');
+  expect(isArabic('١٢٣')).toBe(false);
+  expect(detectScript('١٢٣')).toBe('unknown');
 });
