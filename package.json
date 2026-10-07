@@ -1,0 +1,27 @@
+{
+  "name": "arabic-utils",
+  "version": "0.1.0",
+  "description": "Practical Arabic text utilities for JavaScript developers.",
+  "type": "module",
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    }
+  },
+  "files": ["src", "README.md", "LICENSE"],
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "npm test -- --watch",
+    "demo": "npx serve website"
+  },
+  "keywords": ["arabic", "arabic-language", "rtl", "localization", "text-processing", "i18n"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0"
+  }
+}

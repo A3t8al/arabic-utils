@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+:root { --ink:#17212b; --muted:#687582; --line:#dce5e8; --accent:#0d8b78; --soft:#e9f6f3; --bg:#f6faf9; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:'IBM Plex Sans Arabic',sans-serif; }
+.shell { max-width:960px; margin:auto; padding:64px 24px 28px; }
+.hero { display:flex; align-items:center; gap:22px; margin-bottom:48px; }
+.logo { display:grid; place-items:center; width:64px; height:64px; border-radius:18px; color:white; background:var(--ink); font-size:38px; font-weight:700; }
+.eyebrow { margin:0 0 8px; color:var(--accent); font-family:'Space Grotesk',sans-serif; font-size:11px; letter-spacing:2px; direction:ltr; }
+h1 { margin:0; font-size:clamp(32px,6vw,56px); line-height:1.12; letter-spacing:-1.5px; } h1 span { color:var(--accent); } .intro { color:var(--muted); font-size:17px; margin:14px 0 0; }
+.tool-card { padding:32px; border:1px solid var(--line); border-radius:24px; background:#fff; box-shadow:0 18px 50px #17312b0d; }
+.card-heading { display:flex; align-items:start; justify-content:space-between; margin-bottom:28px; } h2 { margin:0; font-size:28px; } .status { color:var(--accent); font-size:13px; } .status i { display:inline-block; width:7px; height:7px; border-radius:50%; background:#31b68a; margin-left:5px; }
+label,.output-label { display:block; color:var(--muted); font-size:13px; font-weight:600; margin-bottom:8px; } textarea { width:100%; min-height:136px; resize:vertical; padding:16px; border:1px solid var(--line); border-radius:14px; color:var(--ink); font:inherit; font-size:17px; line-height:1.8; outline:none; } textarea:focus { border-color:var(--accent); box-shadow:0 0 0 3px var(--soft); }
+.actions { display:flex; flex-wrap:wrap; gap:9px; margin:18px 0 26px; } button { border:1px solid var(--line); border-radius:9px; padding:10px 15px; color:var(--ink); background:#fff; cursor:pointer; font:inherit; font-size:13px; transition:.2s; } button:hover { border-color:var(--accent); color:var(--accent); transform:translateY(-1px); } .output-wrap { padding:18px; border-radius:14px; background:#12212a; } .output-label { color:#9fb4bd; } pre { margin:0; min-height:54px; color:#b7f0df; direction:rtl; text-align:right; white-space:pre-wrap; font:15px/1.8 'IBM Plex Sans Arabic',sans-serif; }
+footer { display:flex; justify-content:space-between; color:var(--muted); font-size:12px; padding:24px 4px; } footer a { color:var(--accent); text-decoration:none; }
+@media (max-width:600px) { .shell { padding:32px 16px 20px; } .hero { align-items:flex-start; } .logo { width:50px; height:50px; font-size:28px; } .tool-card { padding:20px; } .card-heading { display:block; } .status { display:block; margin-top:12px; } footer { gap:10px; flex-wrap:wrap; } }

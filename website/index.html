@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="موقع تجربة مكتبة Arabic Utils لمعالجة النصوص العربية" />
+  <title>Arabic Utils — أدوات النص العربي</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="logo">ع</div>
+      <div>
+        <p class="eyebrow">ARABIC DEV TOOLKIT</p>
+        <h1>أدوات النص العربي، <span>ببساطة.</span></h1>
+        <p class="intro">جرّب دوال JavaScript مفتوحة المصدر لمعالجة النصوص العربية مباشرة من المتصفح.</p>
+      </div>
+    </header>
+
+    <section class="tool-card">
+      <div class="card-heading">
+        <div><p class="eyebrow">LIVE PLAYGROUND</p><h2>مجرّب الأدوات</h2></div>
+        <span class="status"><i></i> يعمل محلياً</span>
+      </div>
+      <label for="input">النص المدخل</label>
+      <textarea id="input" placeholder="اكتب نصاً عربياً هنا...">مَرْحَبًا! أدوات المطوّرين العرب في 2026</textarea>
+      <div class="actions">
+        <button data-action="digits">١ تحويل الأرقام</button>
+        <button data-action="tashkeel">إزالة التشكيل</button>
+        <button data-action="normalize">تطبيع النص</button>
+        <button data-action="slug">إنشاء Slug</button>
+        <button data-action="stats">إحصائيات النص</button>
+      </div>
+      <div class="output-wrap"><div class="output-label">النتيجة</div><pre id="output">اختر أداة لعرض النتيجة</pre></div>
+    </section>
+
+    <footer><span>MIT License</span><a href="https://github.com/YOUR_USERNAME/arabic-utils">GitHub</a><span>صُنع للمطورين العرب</span></footer>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
